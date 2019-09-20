@@ -1,0 +1,10 @@
+C:\Users\Administrator\RiderProjects\ArchangelUnCloaker\ArchangelUnCloaker\bin\Debug\ArchangelUnCloaker.exe
+C:\Users\Administrator\RiderProjects\ArchangelUnCloaker\ArchangelUnCloaker\bin\Debug\ArchangelUnCloaker.pdb
+C:\Users\Administrator\RiderProjects\ArchangelUnCloaker\ArchangelUnCloaker\bin\Debug\dnlib.dll
+C:\Users\Administrator\RiderProjects\ArchangelUnCloaker\ArchangelUnCloaker\bin\Debug\dnlib.xml
+C:\Users\Administrator\RiderProjects\ArchangelUnCloaker\ArchangelUnCloaker\obj\Debug\ArchangelUnCloaker.csprojAssemblyReference.cache
+C:\Users\Administrator\RiderProjects\ArchangelUnCloaker\ArchangelUnCloaker\obj\Debug\ArchangelUnCloaker.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\RiderProjects\ArchangelUnCloaker\ArchangelUnCloaker\obj\Debug\ArchangelUnCloaker.csproj.CopyComplete
+C:\Users\Administrator\RiderProjects\ArchangelUnCloaker\ArchangelUnCloaker\obj\Debug\ArchangelUnCloaker.exe
+C:\Users\Administrator\RiderProjects\ArchangelUnCloaker\ArchangelUnCloaker\obj\Debug\ArchangelUnCloaker.pdb
+C:\Users\Administrator\RiderProjects\ArchangelUnCloaker\ArchangelUnCloaker\bin\Debug\0Harmony.dll
