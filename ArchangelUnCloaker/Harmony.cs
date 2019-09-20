@@ -5,7 +5,7 @@ using Harmony;
 namespace ArchangelUnCloaker{
     internal static class Harmony{
         public static void Patch(){
-            var h = HarmonyInstance.Create("holly.eazfixer");
+            var h = HarmonyInstance.Create("tobito.fatito");
             h.PatchAll(Assembly.GetExecutingAssembly());
         }
 
