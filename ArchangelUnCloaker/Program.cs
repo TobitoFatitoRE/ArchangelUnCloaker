@@ -53,7 +53,7 @@ namespace ArchangelUnCloaker{
                         }
                         catch{
                         }
-            Console.WriteLine("Found "+MethodFields.Count + " obfuscated fields and deobfuscated them.");
+            Console.WriteLine($"Found {MethodFields.Count} obfuscated fields and deobfuscated them.");
 
             int replacedmethods = 0;
             foreach (var type in Module.Types)
@@ -76,7 +76,7 @@ namespace ArchangelUnCloaker{
 
                 GetOut: ;
             }
-            Console.WriteLine("Successfully Replaced "+replacedmethods + " out of " + MethodFields.Count + " methods.");
+            Console.WriteLine($"Successfully Replaced {replacedmethods} out of {MethodFields.Count} methods.");
 
 
             Module.Types.Remove(specific);
