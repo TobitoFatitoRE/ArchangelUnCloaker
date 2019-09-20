@@ -20,7 +20,7 @@ namespace ArchangelUnCloaker{
             }
 
             var Module = ModuleDefMD.Load(args[0]);
-            var asm = Assembly.LoadFrom(args[0]);
+            var asm = Assembly.LoadFile(args[0]);
 
 
             var Asm = Module.GetAssemblyRefs().First(q => q.FullName.Contains("Archangel.CloakingDevice"));

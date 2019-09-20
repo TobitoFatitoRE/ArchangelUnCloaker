@@ -6,4 +6,9 @@
  
  Special thanks to moose for his harmony class :D
  
+ ## Doesn't Work
+  If it doesn't work put the files on the same directory.
+  Still doesn't work? The file you are trying to deobfuscate has been renamed
+  find the exact assembly name that it had before it was renamed.
+ 
  
