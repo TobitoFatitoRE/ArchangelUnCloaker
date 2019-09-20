@@ -79,7 +79,7 @@ namespace ArchangelUnCloaker{
             Console.WriteLine($"Successfully Replaced {replacedmethods} out of {MethodFields.Count} methods.");
 
 
-            Module.Types.Remove(specific);
+           // Module.Types.Remove(specific); Maybe shouldn't remove, you decide.
             Save(Module, args[0]);
             Console.WriteLine("Successfully Saved!");
             Console.ReadLine();
