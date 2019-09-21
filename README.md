@@ -2,7 +2,7 @@
   The First Public Open-Sourced ArchangelCloak Deobfuscator
 ## How to use:
   Drag n Drop obfuscated program on the deobfuscator exe.
-## Careful! This can in theory invoke viruses, since it invokes the dll. Always run on sandbox/vm.
+## Careful! This can in theory invoke malware, since it invokes the dll and the dll might be malicious. Always run on sandbox/vm.
  
  Special thanks to holly for his harmony class :D
  
