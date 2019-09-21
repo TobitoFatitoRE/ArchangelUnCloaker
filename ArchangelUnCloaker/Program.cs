@@ -56,26 +56,30 @@ namespace ArchangelUnCloaker{
             Console.WriteLine($"Found {MethodFields.Count} obfuscated fields and deobfuscated them.");
 
             int replacedmethods = 0;
-            foreach (var type in Module.Types)
-            foreach (var method in type.Methods){
-                if (method.HasBody && method.Body.HasInstructions)
-                    foreach (var instr in method.Body.Instructions)
-                        if (instr.OpCode == OpCodes.Ldsfld)
-                            try{
-                                var op = (FieldDef) instr.Operand;
-                                var d = MethodFields[op];
-                                if (d == null)
-                                    continue;
-                                method.FreeMethodBody();
-                                method.Body = d.Body;
-                                replacedmethods++;
-                                goto GetOut;
-                            }
-                            catch{
-                            }
+            foreach (var type in Module.GetTypes()){
+                foreach (var method in type.Methods){
+                    if (method.HasBody && method.Body.HasInstructions)
+                        foreach (var instr in method.Body.Instructions)
+                            if (instr.OpCode == OpCodes.Ldsfld)
+                                try{
 
-                GetOut: ;
+                                    var op = (FieldDef) instr.Operand;
+                                    var d = MethodFields[op];
+                                    if (d == null)
+                                        continue;
+                                    method.FreeMethodBody();
+                                    method.Body = d.Body;
+                                    replacedmethods++;
+                                    goto GetOut;
+                                }
+                                catch{
+                                }
+
+                    GetOut: ;
+                }
             }
+            
+
             Console.WriteLine($"Successfully Replaced {replacedmethods} out of {MethodFields.Count} methods.");
             if (replacedmethods != MethodFields.Count){
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -84,7 +88,6 @@ namespace ArchangelUnCloaker{
                 Importer importer = new Importer(Module);
                 IMethod Method;
                 Method = importer.Import(invokemethod);
-            //    method.Body.Instructions.Add(new Instruction(opc,method.Module.Import(Method)));
             var mainmdtok = asm.EntryPoint.MetadataToken;
             foreach (var type in Module.Types){
                 foreach (var method in type.Methods){
@@ -94,14 +97,10 @@ namespace ArchangelUnCloaker{
                 }
             }
             }
-            
-
-
-
-
-
-
-            // Module.Types.Remove(specific); Maybe shouldn't remove, you decide.
+            else{
+                 Module.Types.Remove(specific);
+                 //Maybe shouldn't remove, you decide.
+            }
             Save(Module, args[0]);
             Console.WriteLine("Successfully Saved!");
             Console.ReadLine();

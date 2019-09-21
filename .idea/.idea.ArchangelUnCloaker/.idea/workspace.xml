@@ -46,7 +46,7 @@
   <component name="RunManager">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/ArchangelUnCloaker/bin/Debug/ArchangelUnCloaker.exe" />
-      <option name="PROGRAM_PARAMETERS" value="C:\Users\Administrator\RiderProjects\ArchangelUnCloaker\ArchangelUnCloaker\bin\Debug\CrackMe.exe" />
+      <option name="PROGRAM_PARAMETERS" value="C:\Users\Administrator\RiderProjects\ArchangelUnCloaker\ArchangelUnCloaker\bin\Debug\WindowsApp1.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ArchangelUnCloaker/bin/Debug" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -74,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569005262880</updated>
       <workItem from="1569005264458" duration="8305000" />
-      <workItem from="1569055373754" duration="342000" />
+      <workItem from="1569055373754" duration="1463000" />
     </task>
     <servers />
   </component>
