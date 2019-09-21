@@ -11,4 +11,7 @@
   Still doesn't work? The file you are trying to deobfuscate has been renamed
   find the exact assembly name that it had before it was renamed.
  
+ ## How does it work
+It works by invoking boot method on dll (with harmony attached), then getting the value of the fields and
+using DynamicMethodBodyReader.
  
