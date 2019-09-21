@@ -77,9 +77,31 @@ namespace ArchangelUnCloaker{
                 GetOut: ;
             }
             Console.WriteLine($"Successfully Replaced {replacedmethods} out of {MethodFields.Count} methods.");
+            if (replacedmethods != MethodFields.Count){
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Not all methods were decrypted, rereferencing dll.");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Importer importer = new Importer(Module);
+                IMethod Method;
+                Method = importer.Import(invokemethod);
+            //    method.Body.Instructions.Add(new Instruction(opc,method.Module.Import(Method)));
+            var mainmdtok = asm.EntryPoint.MetadataToken;
+            foreach (var type in Module.Types){
+                foreach (var method in type.Methods){
+                    if (method.MDToken.ToInt32() == mainmdtok){
+                        method.Body.Instructions.Insert(0,new Instruction(OpCodes.Call,Module.Import(Method)));
+                    }
+                }
+            }
+            }
+            
 
 
-           // Module.Types.Remove(specific); Maybe shouldn't remove, you decide.
+
+
+
+
+            // Module.Types.Remove(specific); Maybe shouldn't remove, you decide.
             Save(Module, args[0]);
             Console.WriteLine("Successfully Saved!");
             Console.ReadLine();
