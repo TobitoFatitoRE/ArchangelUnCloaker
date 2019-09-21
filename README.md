@@ -13,5 +13,5 @@
  
  ## How does it work
 It works by invoking boot method on dll (with harmony attached), then getting the value of the fields and
-using DynamicMethodBodyReader.
+using DynamicMethodBodyReader it gets the methoddef out of the delegates.
  
